@@ -23,7 +23,7 @@ export default function GoogleMapsAutocomplete({
   const [isLoading, setIsLoading] = useState(false)
   const [showSuggestions, setShowSuggestions] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
-  const debounceRef = useRef<NodeJS.Timeout>()
+  const debounceRef = useRef<NodeJS.Timeout | null>(null)
 
   // Mock Google Places API - In production, you would use the real Google Places API
   const mockPlaces = [
